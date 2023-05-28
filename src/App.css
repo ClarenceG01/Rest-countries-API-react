@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+*{
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  padding: 0 1.3rem 1.3rem 1.3rem;
+  background-color:hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.all_countries{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.single_country{
+  background-color: hsl(209, 23%, 22%);
+  border-radius: .3rem;
+  width: 20rem;
+  box-shadow: 0 0.1rem 0.1rem hsl(207, 23%, 17%);
+}
+.single_country_details{
+  margin-top: 0.9rem;
+  margin-left: 2rem;
+}
+.single_country_details h4{
+  margin: 1rem 0;
+}
+.single_country_details h5{
+  margin: .2rem 0;
+}
+img{
+  border-top-left-radius: .3rem;
+  border-top-right-radius: 0.3rem;
+  width: 100%;
+  height:50%;
+}
+/* Navbar */
+.navbar{
+  background-color: hsl(209, 23%, 22%);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.theme{
+  display: flex;
+}
+/* Header */
+.header{
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  padding: 1rem ;
+  color: hsl(0, 0%, 100%);
 }
-
-.App-link {
-  color: #61dafb;
+.form{
+  width: 100%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form input{
+  margin-bottom: 2rem ;
+  width:17rem;
+  border:none;
+  border-radius: 0.2rem;
+  background-color: hsl(209, 23%, 22%);
+  padding: .5rem;
+  letter-spacing: 1px;
+}
+.filter{
+  width: 100%;
+}
+.filter select{
+  width:10rem;
+  border-radius: 0.2rem;
+  padding: .5rem;
+  border: none;
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+}
+@media (min-width: 540px){
+  .all_countries{
+    grid-template-columns:repeat(2,1fr);
   }
-  to {
-    transform: rotate(360deg);
+  /* Header */
+  .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 580px){
+  .all_countries{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+@media (min-width: 840px){
+  .all_countries{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+@media (min-width: 1100px){
+  body{
+    padding: 2rem 4rem;
+  }
+  .all_countries{
+    grid-template-columns:repeat(4,1fr);
   }
 }
